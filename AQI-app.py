@@ -17,7 +17,8 @@ fig = px.choropleth(df,
                     color_continuous_scale="Magma",
                     range_color=(0, 170),
                     scope="usa",
-                    labels={'Median.AQI': 'AQI Level'}
+                    labels={'Median.AQI': 'AQI Level'},
+                    animation_frame="Year"
                     )
 
 fig.update_layout(margin={"r":0,"t":0,"l":0,"b":0})
@@ -29,4 +30,4 @@ app.layout = html.Div([
 ])
 
 if __name__ == '__main__':
-    app.run(debug=True)
+    app.run(debug=False)
