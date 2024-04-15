@@ -21,3 +21,7 @@ jobs:
       - name: Deploy to DigitalOcean
         run: |
           ssh -o StrictHostKeyChecking=no deployuser@24.144.92.198 "cd documents/code/AQI-Chart && git pull"
+
+      - name: Restart server
+        run: |
+          ssh -o StrictHostKeyChecking=no deployuser@24.144.92.198 "sudo systemctl restart dashapp.service"
