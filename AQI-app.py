@@ -22,7 +22,7 @@ app.layout = html.Div(
             value=df["Year"].min(),
             marks={str(year): str(year) for year in df["Year"].unique()},
             step=None,
-        )
+        ),
     ]
 )
 
