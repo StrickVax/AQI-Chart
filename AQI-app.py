@@ -10,7 +10,7 @@ with open("counties.json") as f:
 
 df = pd.read_csv("aqi_data.csv", dtype={"FIPS": str})
 
-app = Dash(__name__)
+app = Dash(__name__, requests_pathname_prefix='/aqi-chart/')
 
 app.layout = html.Div(
     [
